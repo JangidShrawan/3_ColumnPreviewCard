@@ -1,0 +1,151 @@
+/* 
+--------------  General Styles  ----------------
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bgc-light-grey-color: hsl(0, 0%, 95%);
+    --trans-white-para-color: hsla(0, 0%, 100%, 0.75);
+    --bright-orange-color:hsl(31, 77%, 52%);
+    --dark-cyan-color: hsl(184, 100%, 22%);
+    --very-dark-cyan-color: hsl(179, 100%, 13%);
+    --card-padding:35px;
+    --button-padding:9px 15px;
+    --main-margin: 40px auto;
+}
+
+h2{
+    font-family: 'Big Shoulders Display', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--bgc-light-grey-color);
+    font-size: 1.8rem;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+p{
+    color:var(--trans-white-para-color);
+}
+
+button{
+    width: 70%;
+    background-color: var(--bgc-light-grey-color);
+    border-radius: 20px;
+    padding: var(--button-padding);
+    border:none;
+}
+/* 
+--------------  Main Styles  ----------------
+*/
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:var(--main-margin);
+}
+
+header{
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card{
+    min-height: 460px;
+    width: 275px;
+    padding: var(--card-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.card-1{
+    border-radius: 5px 0 0 5px;
+    background-color: var(--bright-orange-color);
+    color:var(--bright-orange-color);
+}
+.card-2{
+    background-color: var(--dark-cyan-color);
+    color: var(--dark-cyan-color);
+}
+.card-3{
+    border-radius: 0 5px 5px 0;
+    background-color: var(--very-dark-cyan-color);
+    color: var(--very-dark-cyan-color);
+}
+.card-1 button, .card-2 button, .card-3 button{
+    color: inherit;
+}
+
+
+
+
+/* 
+--------------  Active Styles  ----------------
+*/
+
+button:hover{
+    border:2px solid var(--bgc-light-grey-color);
+    color: var(--trans-white-para-color);
+    background-color: inherit;
+}
+
+/* 
+--------------  Media Queries  ----------------
+*/
+
+@media screen and (max-width: 768px){
+    body{
+        font-size: 14px;
+    }
+    header{
+        min-height: 220px;
+    }
+    .card{
+        min-width: 250px;
+        min-height: 420px;
+    }
+}
+
+@media screen and (max-width:480px){
+    body{
+        height: 100%;
+        font-size: 13px;
+    }
+    header{
+        min-height: 200px;
+    }
+    main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    h1{
+        font-size: 1.4rem;
+    }
+    .card{
+        width: 225px;
+        min-height: 360px;
+    }
+    .card-1{
+        border-radius: 5px 5px 0 0;
+    }
+    .card-3{
+        border-radius: 0 0 5px 5px;
+    }
+}
